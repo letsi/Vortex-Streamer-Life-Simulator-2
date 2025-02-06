@@ -52,7 +52,7 @@ async function prepareForModding(api, discovery) {
 
 async function bepinexRequirement(api, discovery) {
     try {
-        await fs.statAsync(path.join(discovery.path, BEPINEX_PATH, BEPINEX_WINHTTP_FILE_NAME));
+        await fs.statAsync(path.join(discovery.path, BEPINEX_WINHTTP_FILE_NAME));
     } catch (err) {
         const modFiles = await api.ext.nexusGetModFiles(GAME_ID, BEPINEX_MOD_ID);
 
